@@ -9,7 +9,10 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors({
-    origin: "https://task-manager-swoj.onrender.com", 
+    origin: [
+        "http://localhost:5173",
+        "https://task-manager-frontend-zxp8.onrender.com"
+    ],
     credentials: true
 }));
 
