@@ -24,7 +24,7 @@ const SignupForm = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`http://localhost:3000//user/login`, inputs); 
+      const res = await axios.post(`https://task-manager-swoj.onrender.com/user/login`, inputs); 
       axios.defaults.withCredentials = true;
       dispatch(authActions.login(res.data.user));
 

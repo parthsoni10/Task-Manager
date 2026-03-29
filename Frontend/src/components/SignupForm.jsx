@@ -34,7 +34,7 @@ const SignupForm = () => {
         return;
       }
 
-      const res = await axios.post(`http://localhost:3000//user/signup`, inputs);
+      const res = await axios.post(`https://task-manager-swoj.onrender.com/user/signup`, inputs);
       console.log(res.data);
 
       setInputs({

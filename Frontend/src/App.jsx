@@ -19,7 +19,7 @@ const App = () => {
   axios.defaults.withCredentials = true;
 
   useEffect(() => {
-    axios.get("http://localhost:3000//user/check-auth", {
+    axios.get("https://task-manager-swoj.onrender.com/user/check-auth", {
       withCredentials: true
     })
       .then(res => {

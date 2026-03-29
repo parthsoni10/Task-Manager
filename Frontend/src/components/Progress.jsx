@@ -24,7 +24,7 @@ const Progress = () => {
 
     const fetchDashboard = async () => {
         const res = await axios.get(
-            `http://localhost:3000//lists/dashboard`,
+            `https://task-manager-swoj.onrender.com/lists/dashboard`,
             { withCredentials: true }
         );
         setData(res.data);
@@ -38,7 +38,7 @@ const Progress = () => {
     const toggleComplete = async (id) => {
         try {
             await axios.put(
-                `http://localhost:3000//lists/complete/${id}`,
+                `https://task-manager-swoj.onrender.com/lists/complete/${id}`,
                 {},
                 { withCredentials: true }
             );

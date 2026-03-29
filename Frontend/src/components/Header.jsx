@@ -15,7 +15,7 @@ const Header = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get(`http://localhost:3000//user/logout`, {
+      await axios.get(`https://task-manager-swoj.onrender.com/user/logout`, {
         withCredentials: true
       });
 

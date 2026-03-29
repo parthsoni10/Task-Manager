@@ -7,7 +7,7 @@ const Habit = () => {
     const [duration, setDuration] = useState(15);
 
     const fetchHabits = async () => {
-        const res = await axios.get(`http://localhost:3000//lists/habit`, {
+        const res = await axios.get(`https://task-manager-swoj.onrender.com/lists/habit`, {
             withCredentials: true
         });
         setHabits(res.data);
@@ -21,7 +21,7 @@ const Habit = () => {
         if (!title) return;
 
         await axios.post(
-            `http://localhost:3000//lists/habit`,
+            `https://task-manager-swoj.onrender.com/lists/habit`,
             { title, duration: 15 },
             { withCredentials: true }
         );
@@ -32,7 +32,7 @@ const Habit = () => {
 
     const toggleDay = async (habitId, index) => {
         await axios.put(
-            `http://localhost:3000//lists/habit/${habitId}/${index}`,
+            `https://task-manager-swoj.onrender.com/lists/habit/${habitId}/${index}`,
             {},
             { withCredentials: true }
         );
@@ -43,7 +43,7 @@ const Habit = () => {
     const deleteHabit = async (id) => {
         try {
             await axios.delete(
-                `http://localhost:3000//lists/habit/${id}`,
+                `https://task-manager-swoj.onrender.com/lists/habit/${id}`,
                 { withCredentials: true }
             );
 

@@ -17,7 +17,7 @@ const UpdateTask = () => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:3000//lists`, {
+    axios.get(`https://task-manager-swoj.onrender.com/lists`, {
       withCredentials: true
     })
     .then(res => {
@@ -35,7 +35,7 @@ const UpdateTask = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:3000//lists/${id}`,
+        `https://task-manager-swoj.onrender.com/lists/${id}`,
         task,
         { withCredentials: true }
       );
